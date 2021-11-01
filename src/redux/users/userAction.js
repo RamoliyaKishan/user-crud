@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from 'react-toastify';
 import { 
     FETCH_ALL_USERS,
     FETCH_ALL_USERS_SUCCESS,
@@ -41,12 +42,15 @@ export const deleteUser = (id) => {
         axios.delete(`${process.env.REACT_APP_API}/${id}`)
             .then(() => {
                 dispatch({ type: DELETE_USER_SUCCESS });
+                toast.success("User Deleted successfully...");
                 dispatch(getAllUsers());
+
             })
-            .catch((error) => {
+            .catch(() => {
                 dispatch({ 
                     type: DELETE_USER_FAILURE, 
                 });
+                toast.error("User is not deleteed");
             });
     }
 };
@@ -56,14 +60,16 @@ export const addUser = (user) => {
     return function (dispatch) {
         dispatch({ type: ADD_USER });
         axios.post(`${process.env.REACT_APP_API}`, user)
-            .then((response) => {
+            .then(() => {
                 dispatch({ type: ADD_USER_SUCCESS });
                 dispatch(getAllUsers());
+                toast.success("User Added Successfully....");
             })
-            .catch((error) => {
+            .catch(() => {
                 dispatch({ 
                     type: ADD_USER_FAILURE, 
                 });
+                toast.success("Sorry, User is not Added !!!!");
             });
     }
 };
@@ -91,15 +97,16 @@ export const editUser = (id, user) => {
     return function (dispatch) {
         dispatch({ type: EDIT_USER });
         axios.put(`${process.env.REACT_APP_API}/${id}`, user)
-            .then((response) => {
+            .then(() => {
                 dispatch({
                     type: EDIT_USER_SUCCESS,
                 });
+                toast.success("User Edited Successfully....");
                 dispatch(getAllUsers());
             })
-            .catch((error) => {
+            .catch(() => {
                 dispatch({ type: EDIT_USER_FAILURE});
-
+                toast.error("Sorry, User is not edited !!!!");
             });
     }
 };

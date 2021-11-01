@@ -1,7 +1,4 @@
 import React, { useEffect} from 'react';
-// import {v4 as uuid} from 'uuid';
-import { useFormik } from "formik";
-import * as yup from "yup";
 import { 
     TextField,
     Button,
@@ -11,16 +8,21 @@ import {
     Typography,
     InputAdornment
 } from '@material-ui/core';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import AddIcon from '@material-ui/icons/Add';
+// import {v4 as uuid} from 'uuid';
+import { useFormik } from "formik";
+import * as yup from "yup";
+
+
 import { userFormStyles } from './style';
 import { addUser, editUser, getOneUser } from '../../redux/users/userAction';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router';
-import Loader from '../../commponents/Loader';
+import Loader from '../../components/Loader';
 
 const UserForm = () => {
     const classes = userFormStyles();

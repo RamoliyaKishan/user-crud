@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 import { Container,
     Paper,
     Typography,    
@@ -12,21 +14,18 @@ import { Container,
     Button,
     TablePagination,
 } from '@material-ui/core';
-import { userTableStyle } from './style';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteUser, getAllUsers } from '../../redux/users/userAction';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import Loader from '../../commponents/Loader';
-import { useHistory } from 'react-router';
+import { userTableStyle } from './style';
+import { deleteUser, getAllUsers } from '../../redux/users/userAction';
+import Loader from '../../components/Loader';
 
 const UserTable = () => {
-    const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(5);
     const classes = userTableStyle();
     let dispatch = useDispatch();
     const history = useHistory();
-
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     const {usersData, loadingFetchUsers, loadingDeleteUser} = useSelector(state => state.users);
 
     useEffect(() => {
