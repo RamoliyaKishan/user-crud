@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Doctors",
+      "email": "emaail@gmail.com",
+      "contact": 7894561232,
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "abc",
+      "email": "demo1hhvnnnnnnnnn@gmail.com",
+      "contact": 7894561231,
+      "password": "123"
+    },
+    {
+      "id": "b419d7dd-5ee3-4f8a-a084-710690056ec2",
+      "name": "customer1@gmail.com",
+      "email": "Kishan@gmail.com",
+      "contact": 9978150916,
+      "password": "customer123"
+    },
+    {
+      "name": "Doctors",
+      "email": "emaail@gmail.com",
+      "contact": 7894561232,
+      "password": "12345678",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "abc",
+      "email": "demo1hhvnnnnnnnnn@gmail.com",
+      "contact": 7894561231,
+      "password": "123"
+    },
+    {
+      "id": "b419d7dd-5ee3-4f8a-a084-710690056jhv2",
+      "name": "customer1@gmail.com",
+      "email": "Kishan@gmail.com",
+      "contact": 9978150916,
+      "password": "customer123"
+    }
+  ]
+}
