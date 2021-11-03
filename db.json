@@ -36,11 +36,18 @@
       "id": "b419d7dd-5ee3-4f8a-a084-710690056jhv2"
     },
     {
-      "name": "demo2",
-      "email": "demo2@gmail.com",
+      "name": "demo1",
+      "email": "demo1@gmail.com",
       "contact": 9876543210,
       "password": "customer123",
       "id": 7
+    },
+    {
+      "name": "dhruv",
+      "email": "dhruv@gmail.com",
+      "contact": 9879879879,
+      "password": "321321321",
+      "id": 8
     }
   ]
 }
